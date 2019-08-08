@@ -1,0 +1,55 @@
+<html lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130568750-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-130568750-1');
+    </script>
+    <link href="./css/select2.css" rel="stylesheet"/>
+    <script src="./js/select2.js"></script>
+    <script>
+        $(document).ready(function() { $("#awoken").select2({
+            formatResult: format,
+            formatSelection: format,
+            escapeMarkup: function(m) { return m; }
+        }); });
+        function format(state) {
+            var originalOption = state.element;
+            if (!state.id) return state.text; // optgroup
+            return "<img src='" + $(originalOption).data('pic') + "' width='30' height='30' align='absmiddle' />  " + state.text;
+        }
+    </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> A.Fusion Monster Selector </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body> 
+    <tr>
+        <td style="padding-left:0px">
+            First Choose
+        </td>
+        <td colspan="3">
+            <select name="category" id="category" style="padding:3px ;width:300px" onchange="PetsSearch2()">
+                <option value="覺醒忒提斯" data-pic="./img/M044_icon.png"></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+                <option value="覺醒阿拉克尼" data-pic="./img/M045_icon.png "></option>
+            </select>
+        </td>
+    </tr>
+</body> 
